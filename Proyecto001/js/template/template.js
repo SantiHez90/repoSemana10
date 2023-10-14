@@ -1,20 +1,25 @@
-let MenuItems = ["Beef", "Rice", "Wine"];
+/* let MenuItems = ["Beef", "Rice", "Wine"]; */
+
+let MenuItems = {"Sopa":5000,"Jugo":4000};
 
 function InitialValues() {
     var select = document.getElementsByClassName("menuItems");
+    var ItemsMenu = Object.keys(MenuItems);
 
-    for (var i = 0; i < select.length; i++) {
+    for (var i = 0; i < ItemsMenu.length; i++) {
 
-        MenuItems.forEach((value) => {
-            // New item
+        ItemsMenu.forEach((key) => {
+
+            console.log(key);
             let option = document.createElement("option");
-            option.text = value;
-            option.value = value;
-
+            option.text = key;
+            option.value = MenuItems[key];
+            console.log(MenuItems[key]);
+    
             select[i].appendChild(option);
         });
+    
     }
-}
 
 function AddTemplateItem(label, value) {
     let template = `<li class="list-group-item d-flex justify-content-between align-items-center">${label}<span class="badge bg-primary rounded-pill">${value}</span></li>`
