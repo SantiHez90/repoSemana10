@@ -1,25 +1,31 @@
 /* let MenuItems = ["Beef", "Rice", "Wine"]; */
 
+
+// Items
 let MenuItems = {"Sopa":5000,"Jugo":4000};
 
+// Convertir el diccionario a solo claves
+var claveDicc = Object.keys(MenuItems);
+
+console.log("Hola");
 function InitialValues() {
+
     var select = document.getElementsByClassName("menuItems");
     var ItemsMenu = Object.keys(MenuItems);
 
     for (var i = 0; i < ItemsMenu.length; i++) {
 
         ItemsMenu.forEach((key) => {
-
             console.log(key);
             let option = document.createElement("option");
             option.text = key;
             option.value = MenuItems[key];
             console.log(MenuItems[key]);
-    
             select[i].appendChild(option);
         });
     
     }
+}
 
 function AddTemplateItem(label, value) {
     let template = `<li class="list-group-item d-flex justify-content-between align-items-center">${label}<span class="badge bg-primary rounded-pill">${value}</span></li>`
