@@ -11,6 +11,9 @@
 </head>
 
 <body>
+
+    
+
     <div>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container-fluid">
@@ -70,8 +73,7 @@
                                     </select>
                                 </div>
                                 <div class="col-12">
-                                    <button onclick="AddItem(inputState.value,1)" type="button"
-                                        class="btn btn-primary">Agregar producto</button>
+                                    <button onclick="AddItem(inputState.value,1)" type="button" class="btn btn-primary">Agregar producto</button>
                                 </div>
                             </form>
                             <hr>
@@ -82,7 +84,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Precio de los productos
-                                    <span class="">0</span>
+                                    <span class="" id="ValorTM1">0</span>
                                 </li>
                             </ul>
                         </div>
@@ -109,7 +111,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Precio de los productos
-                                    <span class="">0</span>
+                                    <span class="" id="ValorTM2">0</span>
                                 </li>
                             </ul>
                         </div>
@@ -136,7 +138,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Precio de los productos
-                                    <span class="">0</span>
+                                    <span class="" id="ValorTM3">0</span>
                                 </li>
                             </ul>
                         </div>
@@ -163,7 +165,7 @@
                                 </li>
                                 <li class="list-group-item d-flex justify-content-between align-items-center">
                                     Precio de los productos
-                                    <span class="">0</span>
+                                    <span class="" id="ValorTM4">0</span>
                                 </li>
                                 </li>
                             </ul>
@@ -194,6 +196,7 @@
             </div>
         </div>
     </div>
+
     <script src="./js/template/template.js"></script>
     <script src="./js/core/code.js"></script>
 </body>

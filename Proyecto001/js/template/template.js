@@ -1,13 +1,10 @@
-/* let MenuItems = ["Beef", "Rice", "Wine"]; */
-
-
 // Items
-let MenuItems = {"Sopa":5000,"Jugo":4000};
+
+let MenuItems = {"Sopa de 5":5000,"Jugo de 4":4000,"Hamburguesa de 3":3000,"Papas de 2":2000,"Gaseosa de 1":1000};
 
 // Convertir el diccionario a solo claves
 var claveDicc = Object.keys(MenuItems);
 
-console.log("Hola");
 function InitialValues() {
 
     var select = document.getElementsByClassName("menuItems");
@@ -16,27 +13,15 @@ function InitialValues() {
     for (var i = 0; i < ItemsMenu.length; i++) {
 
         ItemsMenu.forEach((key) => {
-            console.log(key);
+            /* console.log("La llave es: "+key); */
             let option = document.createElement("option");
             option.text = key;
             option.value = MenuItems[key];
-            console.log(MenuItems[key]);
+            /* console.log("El valor es: "+MenuItems[key]); */
             select[i].appendChild(option);
         });
     
     }
-}
-
-function AddTemplateItem(label, value) {
-    let template = `<li class="list-group-item d-flex justify-content-between align-items-center">${label}<span class="badge bg-primary rounded-pill">${value}</span></li>`
-
-    return template;
-}
-
-function AddTableItem(id, first, last, handle) {
-    let template = `<tr><th scope="row">${id}</th><td>${first}</td><td>${last}</td><td>${handle}</td></tr>`
-
-    return template;
 }
 
 function AddTableItemOption2(id, first, last, handle) {
@@ -61,5 +46,5 @@ function AddTableItemOption2(id, first, last, handle) {
     return tableRow;
 }
 
-// Initial values and template defaults
+/* window.AddTableItemOption2 = AddTableItemOption2; */
 InitialValues();
