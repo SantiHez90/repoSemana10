@@ -1,14 +1,39 @@
+numventa = 0;
 
 function AddItem(val,mesa) {
-
-    var numventa = 1;
-    
-    document.getElementById("salesItems").appendChild(AddTableItemOption2(numventa, val, `other: ${val}`, mesa));
-    var numventa = numventa + 1;
-
+    numventa++;
     agregarCantidad(mesa)
     valorTotal(val,mesa)
+    AgregarALista(val,mesa,numventa)
+
+    
 }
+
+function AgregarALista(val,mesa,numventa){
+    switch (mesa){
+        case 1:
+            var opcionProductos1 = document.getElementById('inputState1');
+            var nombreProducto = opcionProductos1.options[opcionProductos1.selectedIndex].text;
+            document.getElementById("salesItems").appendChild(AddTableItemOption2(numventa, nombreProducto, val, mesa));
+            break
+        case 2:
+            var opcionProductos2 = document.getElementById('inputState2');
+            var nombreProducto = opcionProductos2.options[opcionProductos2.selectedIndex].text;
+            document.getElementById("salesItems").appendChild(AddTableItemOption2(numventa, nombreProducto, val, mesa));
+            break
+        case 3:
+            var opcionProductos3 = document.getElementById('inputState3');
+            var nombreProducto = opcionProductos3.options[opcionProductos3.selectedIndex].text;
+            document.getElementById("salesItems").appendChild(AddTableItemOption2(numventa, nombreProducto, val, mesa));
+            break
+        case 4:
+            var opcionProductos4 = document.getElementById('inputState4');
+            var nombreProducto = opcionProductos4.options[opcionProductos4.selectedIndex].text;
+            document.getElementById("salesItems").appendChild(AddTableItemOption2(numventa, nombreProducto, val, mesa));
+            break
+    }
+}
+
 
 function agregarCantidad(mesa){
 
@@ -38,7 +63,6 @@ function agregarCantidad(mesa){
             cantidadM4.innerText = valorActualM4;
             break
     }
-    console.log("agregar cantidad de :"+mesa);
 }
 
 function valorTotal(val,mesa){

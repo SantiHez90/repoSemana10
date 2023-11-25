@@ -1,6 +1,6 @@
 // Items
 
-let MenuItems = {"Sopa de 5":5000,"Jugo de 4":4000,"Hamburguesa de 3":3000,"Papas de 2":2000,"Gaseosa de 1":1000};
+    let MenuItems = {"Sopa de Pescado":5000,"Jugo de mango":4000,"Hamburguesa de pollo":3000,"Papas a la francesa":2000,"Gaseosa 7oz":1000};
 
 // Convertir el diccionario a solo claves
 var claveDicc = Object.keys(MenuItems);
@@ -22,6 +22,7 @@ function InitialValues() {
         });
     
     }
+
 }
 
 function AddTableItemOption2(id, first, last, handle) {
